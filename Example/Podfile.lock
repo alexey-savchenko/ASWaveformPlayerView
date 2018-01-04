@@ -1,0 +1,16 @@
+PODS:
+  - ASWaveformPlayerView (0.1.0)
+
+DEPENDENCIES:
+  - ASWaveformPlayerView (from `../`)
+
+EXTERNAL SOURCES:
+  ASWaveformPlayerView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ASWaveformPlayerView: 4fe9aafa5cb4dfbc04dbcb4ca877615e8a5061d8
+
+PODFILE CHECKSUM: 7c3956155f85c094fb1ccfd0c03d2b9e9ed37e7f
+
+COCOAPODS: 1.3.1

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ASWaveformPlayerView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ASWaveformPlayerView.'
+  s.summary          = 'Audio waveform view with playback functionality.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+
+  UIView subclass that displays waveform of a provided local audio file.
+
+
                        DESC
 
   s.homepage         = 'https://github.com/alexey-savchenko/ASWaveformPlayerView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://i.imgur.com/GAKHlxq.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'alexey-savchenko' => 'alexey.savchenko.home@gmail.com' }
   s.source           = { :git => 'https://github.com/alexey-savchenko/ASWaveformPlayerView.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/Alex_Svch'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'ASWaveformPlayerView/Classes/**/*'
   
@@ -37,6 +40,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit', 'Foundation', 'Accelerate', 'AVFoundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

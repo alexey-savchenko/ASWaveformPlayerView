@@ -1,0 +1,6 @@
+framework module ASWaveformPlayerView {
+  umbrella header "ASWaveformPlayerView-umbrella.h"
+
+  export *
+  module * { export * }
+}

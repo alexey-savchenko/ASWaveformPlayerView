@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import ASWaveformPlayerView
+
 
 class Tests: XCTestCase {
     
