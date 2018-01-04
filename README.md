@@ -50,40 +50,40 @@ import ASWaveformPlayerView
 
 class ViewController: UIViewController {
 
-let audioURL = Bundle.main.url(forResource: "testAudio", withExtension: "mp3")!
+  let audioURL = Bundle.main.url(forResource: "testAudio", withExtension: "mp3")!
 
-override func viewDidLoad() {
-super.viewDidLoad()
+  override func viewDidLoad() {
+  super.viewDidLoad()
 
-do {
+    do {
 
-let waveform = try ASWaveformPlayerView(audioURL: audioURL, // URL to local audio file
-sampleCount: 1024, // higher numbers make waveform more detailed
-amplificationFactor: 500) // constant that affects height of each 'bar' in waveform
+      let waveform = try ASWaveformPlayerView(audioURL: audioURL, // URL to local a audio file
+                                              sampleCount: 1024, // higher numbers make waveform more detailed
+                                              amplificationFactor: 500) // constant that affects height of each 'bar' in waveform
 
-waveform.normalColor = .lightGray
-waveform.progressColor = .orange
-//with high sampleCount passed to init method to avoid artifacts set this to false
-waveform.allowSpacing = false
+      waveform.normalColor = .lightGray
+      waveform.progressColor = .orange
+      //with high sampleCount passed to init method to avoid artifacts set this to false
+      waveform.allowSpacing = false
 
-view.addSubview(waveform)
+      view.addSubview(waveform)
 
-//ASWaveformPlayerView supports both manual and AutoLayout
-waveform.translatesAutoresizingMaskIntoConstraints = false
+      //ASWaveformPlayerView supports both manual and AutoLayout
+      waveform.translatesAutoresizingMaskIntoConstraints = false
 
-let safeArea = view.safeAreaLayoutGuide
+      let safeArea = view.safeAreaLayoutGuide
 
-NSLayoutConstraint.activate([waveform.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-waveform.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
-waveform.heightAnchor.constraint(equalToConstant: 128),
-waveform.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-waveform.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)])
+      NSLayoutConstraint.activate([waveform.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+                                   waveform.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
+                                   waveform.heightAnchor.constraint(equalToConstant: 128),
+                                   waveform.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
+                                   waveform.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)])
 
-} catch {
-//handle error thrown
-print(error.localizedDescription)
-}
-}
+    } catch {
+      //handle error thrown
+      print(error.localizedDescription)
+    }
+  }
 }
 ```
 
