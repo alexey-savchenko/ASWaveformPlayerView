@@ -10,9 +10,9 @@ import Foundation
 import AVFoundation
 import Accelerate
 
-class AudioAnalyzer {
+public class AudioAnalyzer {
   
-  func analyzeAudioFile(url: URL) throws -> [Float] {
+  public func analyzeAudioFile(url: URL) throws -> [Float] {
     
     //Read File into AVAudioFile
     let file = try AVAudioFile(forReading: url)
@@ -47,7 +47,7 @@ class AudioAnalyzer {
     
   }
   
-  func amplify(_ inputArray: [Float], by amplificationFactor: Float) -> [Float] {
+  public func amplify(_ inputArray: [Float], by amplificationFactor: Float) -> [Float] {
     
     let amplificationVector = [Float](repeating: amplificationFactor, count: inputArray.count)
     
@@ -65,7 +65,7 @@ class AudioAnalyzer {
     
   }
   
-  func resample(_ inputArray: [Float], to targetSize: Int) -> [Float] {
+  public func resample(_ inputArray: [Float], to targetSize: Int) -> [Float] {
     
     let stride = vDSP_Stride(inputArray.count / targetSize)
     

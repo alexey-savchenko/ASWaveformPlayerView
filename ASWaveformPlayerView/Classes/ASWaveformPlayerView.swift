@@ -9,14 +9,14 @@
 import UIKit
 import AVFoundation
 
-class ASWaveformPlayerView: UIView {
+public class ASWaveformPlayerView: UIView {
   
   //MARK: Public properties
-  var normalColor = UIColor.lightGray
+  public var normalColor = UIColor.lightGray
   
-  var progressColor = UIColor.orange
+  public var progressColor = UIColor.orange
   
-  var allowSpacing = true
+  public var allowSpacing = true
   
   
   
@@ -38,7 +38,7 @@ class ASWaveformPlayerView: UIView {
   
   
   //MARK: Initialization
-  init(audioURL: URL,
+  public init(audioURL: URL,
        sampleCount: Int,
        amplificationFactor: Float) throws {
     
@@ -77,7 +77,7 @@ class ASWaveformPlayerView: UIView {
     
   }
   
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
   
@@ -90,7 +90,7 @@ class ASWaveformPlayerView: UIView {
   
   
   //MARK: Methods
-  override func layoutSubviews() {
+  override public func layoutSubviews() {
     super.layoutSubviews()
     populateWithData()
     addOverlay()
@@ -104,7 +104,7 @@ class ASWaveformPlayerView: UIView {
   
 
 
-  @objc func handlePan(_ recognizer: UIPanGestureRecognizer) {
+  @objc private func handlePan(_ recognizer: UIPanGestureRecognizer) {
     
     switch recognizer.state {
       
@@ -144,7 +144,7 @@ class ASWaveformPlayerView: UIView {
     
   }
   
-  @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
+  @objc private func handleTap(_ recognizer: UITapGestureRecognizer) {
     if audioPlayer.rate == 0 {
       audioPlayer.play()
     } else {
@@ -190,7 +190,7 @@ class ASWaveformPlayerView: UIView {
     
   }
   
-  func updatePlotWith(_ location: Float) {
+  private func updatePlotWith(_ location: Float) {
     
     let percentageInSelf = location / Float(bounds.width)
     
@@ -208,7 +208,7 @@ class ASWaveformPlayerView: UIView {
     
   }
   
-  func updatePlotWith(_ currentTime: CMTime) {
+  private func updatePlotWith(_ currentTime: CMTime) {
     
     guard shouldAutoUpdateWaveform == true else {
       return
@@ -240,7 +240,7 @@ class ASWaveformPlayerView: UIView {
     
   }
   
-  func addOverlay() {
+  private func addOverlay() {
     
     let maskLayer = CALayer()
     maskLayer.frame = bounds
@@ -271,13 +271,13 @@ class ASWaveformPlayerView: UIView {
   }
   
   /// Reset progress of playback and waveform
-  func reset() {
+  public func reset() {
     waveforms.forEach {
       $0.backgroundColor = normalColor.cgColor
     }
   }
   
-  func clear() {
+  public func clear() {
     layer.sublayers?.forEach {
       $0.removeFromSuperlayer()
     }
