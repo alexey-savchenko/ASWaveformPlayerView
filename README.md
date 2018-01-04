@@ -35,9 +35,9 @@ This view has 2 gesture recognizers attached:
 
 There are 3 public properties:
 
-`normalColor` - default color of waveform, fills section of waveform that is yet to be played.
-`progressColor` - already played section of waveform fills with this color.
-`allowSpacing` - inserts little spacing between bars in waveform.
+* `normalColor` - default color of waveform, fills section of waveform that is yet to be played.
+* `progressColor` - already played section of waveform fills with this color.
+* `allowSpacing` - inserts little spacing between bars in waveform.
 
 ## Usage
 
