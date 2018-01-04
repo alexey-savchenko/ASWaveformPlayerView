@@ -19,8 +19,17 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 
-  UIView subclass that displays waveform of a provided local audio file.
+A UIView subclass that displays waveform of a provided local audio file.
 
+This view has 2 gesture recognizers attached:
+1) UITapGestureRecognizer - Play - Pause associated with a view audio file.
+2) UIPanGestureRecognizer - Seek audio file to specified position.
+
+There are 3 public properties:
+
+normalColor - default color of waveform, displays on section of waveform that is yet to be played.
+progressColor - already played section of waveform fills with this color.
+allowSpacing - inserts little spacing between bars in waveform.
 
                        DESC
 
