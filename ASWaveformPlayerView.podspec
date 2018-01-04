@@ -37,7 +37,10 @@ allowSpacing - inserts little spacing between bars in waveform.
   s.screenshots     = 'https://i.imgur.com/GAKHlxq.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'alexey-savchenko' => 'alexey.savchenko.home@gmail.com' }
-  s.source           = { :git => 'https://github.com/alexey-savchenko/ASWaveformPlayerView.git', :branch => "master", :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/alexey-savchenko/ASWaveformPlayerView.git',
+                         :branch => "master",
+                         :tag => s.version.to_s }
+
   s.social_media_url = 'https://twitter.com/Alex_Svch'
 
   s.ios.deployment_target = '11.0'
