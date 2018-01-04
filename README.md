@@ -24,7 +24,7 @@ pod 'ASWaveformPlayerView'
 
 
 <p align="center">
-<img src="https://i.imgur.com/4N46rjHl.png" alt="ASWaveformPlayerView"/>
+<img src="https://i.imgur.com/f4mPtwJ.png" alt="ASWaveformPlayerView"/>
 </p>
 
 A UIView subclass that displays waveform of a provided local audio file.
