@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ASWaveformPlayerView_Example' do
+  pod 'ASWaveformPlayerView', :path => '../'
+
+  target 'ASWaveformPlayerView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
